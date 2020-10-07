@@ -1,0 +1,11 @@
+function cake(x, y) {
+  let ySum = 0;
+  for (let i = 0; i < y.length; i += 2) {
+    ySum += y.charCodeAt(i);
+  }
+  for (let i = 1; i < y.length; i += 2) {
+    ySum += y.charCodeAt(i) - 92;
+  }
+
+  return ySum > x * 0.7 ? 'Fire!' : 'That was close!';
+}
